@@ -4,10 +4,13 @@ import sqlite3
 import MySQLdb
 
 import urllib
+from django.conf import settings
+from django import template
 
-urllib.urlretrieve(#r'http://web.topfreeweb.net:8000/index.php/downapp/localdown?aid=34',
-                    r'http://192.168.171.217:8000/learn/download/file_download',
-                   r'E:\MyCode\DjangoProjects\Mysite\learn\aaa.txt'
-                   )
+t = template.Template('My name is {{ name }}.')
+##c = template.Context({'name': 'Adrian'})
+##print t.render(c)
+##
+##c = template.Context({'name': 'Fred'})
+##print t.render(c)
 
-print"END"
