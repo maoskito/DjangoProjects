@@ -6,11 +6,9 @@ import MySQLdb
 import urllib
 from django.conf import settings
 from django import template
+import os, datetime, binascii, time
 
-t = template.Template('My name is {{ name }}.')
-##c = template.Context({'name': 'Adrian'})
-##print t.render(c)
-##
-##c = template.Context({'name': 'Fred'})
-##print t.render(c)
+
+print  time.time()
+
 

@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^learn/', include('learn.urls')),
     url(r'^polls/', include('polls.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^downloads/', include('downloads.urls'),)
 ]
