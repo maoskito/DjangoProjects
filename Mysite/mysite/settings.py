@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     #my
     'polls.apps.PollsConfig',
     'learn',
-    'downloads'
+    'myDownloads'
 ]
 
 MIDDLEWARE_CLASSES = [
