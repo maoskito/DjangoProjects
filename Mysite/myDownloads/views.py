@@ -27,7 +27,9 @@ def file_iterator(file_name, chunk_size=512):
                 break
 def file_download(request, filename):
     folder = r'E:\MyCode\DjangoProjects\Mysite\test'
-    print '==========>'+filename
+##    if not os.path.isfile(os.path.join( folder, filename)):
+##        return HttpResponse('not a file')
+    print '==========>'+request.META['REMOTE_ADDR']
     
 ##    response = HttpResponse(data,content_type='application/octet-stream')
     response = StreamingHttpResponse(file_iterator(os.path.join( folder, filename)))
