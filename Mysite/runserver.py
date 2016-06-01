@@ -17,8 +17,8 @@ no = raw_input("input the server no:")
 cmd = [
     'E:',
     'cd '+os.path.join( root, allfolders[int(no)-1]),
-    #'manage.py runserver 127.0.0.1:8000',
-    'manage.py runserver 0.0.0.0:80',
+    'manage.py runserver 0.0.0.0:8000',
+    #'manage.py runserver 0.0.0.0:80',
     ]
 
 for c in cmd:
