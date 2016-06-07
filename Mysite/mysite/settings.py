@@ -57,7 +57,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join( os.path.dirname(__file__), 'learn/Templates').replace('\\','/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -106,7 +106,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
-
+##FILE_CHARSET='gb2312'
+##DEFAULT_CHARSET='utf-8'
 LANGUAGE_CODE = 'en_US'
 
 TIME_ZONE = 'UTC'
