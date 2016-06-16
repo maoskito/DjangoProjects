@@ -1,35 +1,15 @@
+import os
 import django
 from django.test import TestCase
-import os
-os.environ.setdefault('DJANGO_SETTINGS_MODULE','mysite.settings')
-##settings.configure()
+from django.conf import settings
+import mysite
+from learn import myapp_defaults
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE','learn.myapp_defaults')
 django.setup()
-#======================
-from django import template
-from django.template import Template
-from django.template import Context
+#
+from learn.models import Publisher
 
-##t = Template('{% notatag %}')
-class SilentAssertionError(AssertionError):
-    silent_variable_failure = True
+print Publisher.objects.all().filter(name__contains='A'
+                                     )
 
-class PersonClass3(object):
-    
-    def first_name(self):
-        raise SilentAssertionError, "foo"
-    def delete(self):
-        print 'delete!'
-    delete.alters_data = True
-
-t = Template('''
-{% for athlete in athlete_list %}
-    <p>{{ athlete }}</p>
-    {{forloop.first}}
-{% empty %}
-    <p>There are no athletes. Only computer programmers.</p>
-{% endfor %}
-''')
-
-
-c = { 'athlete_list':['','test_1','test_2','test_3']}
-print t.render(Context(c))
