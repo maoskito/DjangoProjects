@@ -1,0 +1,21 @@
+﻿<html>
+<head>
+	<title>Search</title>
+</head>
+{% for error in errors%}
+	<p>{{error}}</p>
+{% endfor %}
+<body>	
+	<form action="search" method="get">
+		<input type="text" name="q">
+		<input type="submit" value="搜">
+		{% comment %}
+		</br>
+		<input type="text" name="k">
+		<input type="checkbox" name="chaeckbox_1">
+		</br>
+		<input type="password" name="password">
+		{% endcomment %}
+	</form> 
+</body>
+</html>

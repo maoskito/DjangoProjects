@@ -10,6 +10,7 @@ django.setup()
 #
 from learn.models import Publisher
 
-print Publisher.objects.all().filter(name__contains='A'
-                                     )
+##print Publisher.objects.all()[0]
+print Publisher.objects.filter(name__contains='A')
+
 

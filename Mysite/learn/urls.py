@@ -4,7 +4,9 @@ from . import views
 
 urlpatterns = [
     url(r'^time/$', views.current_datetime),
-    url(r'^(\d{1,3})\+(\d{1,3})$', views.plus),
 ##    url(r'^download/file_download$', views.file_download),
     url(r'^hello$', views.hello),
+    url(r'^search$', views.search),
+    url(r'^contact$', views.contact),
+##    url(r'^search$', views.search),
 ]
